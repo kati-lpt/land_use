@@ -166,16 +166,12 @@ Released under the MIT license: http://jsbin.mit-license.org
     }
     map.on('click', onClick);*/
     map.on('click', function (event) {
-      //console.log('Mouse Clicked');
-      //console.log(event.point);
 
       const geometry = event.point;
       const parameters = {
         layers: ['lots']
       };
       const features = map.queryRenderedFeatures(geometry, parameters);
-      //console.log(features);
-      //console.log(features.length + ' features');
       const lot = features[0];
 
       console.log(lot);
